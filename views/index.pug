@@ -2,4 +2,18 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to My world Varsha...! I love dancing,singing, playing  badminton, spending time with pets.
+  p I have a pet cat named Shero
+  button(type="button", class="btn btn-primary"  onclick="doReduce()") Press Me
+    
+  div(id="reduce") Reduce the value
+  //-a(href='http://localhost:3000/pearl') Link
+  script.
+    let count=20;
+    let change =-1;
+    function doReduce(){
+      count=count+change;
+      change=change-1;
+      document.getElementById('reduce').innerHTML=`Count ${count} with Change ${change}`
+    }
+
